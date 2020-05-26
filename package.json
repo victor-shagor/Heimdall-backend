@@ -1,0 +1,42 @@
+{
+  "name": "heimdall-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test yarn run drop && cross-env NODE_ENV=test yarn run create && cross-env NODE_ENV=test jest",
+    "start": "nodemon --exec babel-node app.js",
+    "create": "babel-node ./src/migrations/createModel.js",
+    "drop": "babel-node ./src/migrations/dropModel.js",
+    "populate": "babel-node ./src/migrations/seedUsers.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victor-shagor/Heimdall-backend.git"
+  },
+  "author": "Abiola Ojo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victor-shagor/Heimdall-backend/issues"
+  },
+  "homepage": "https://github.com/victor-shagor/Heimdall-backend#readme",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "@babel/runtime-corejs3": "^7.9.6",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "jest": "^26.0.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "pg": "^8.2.1",
+    "react-hook-form": "^5.7.2",
+    "supertest": "^4.0.2"
+  }
+}
