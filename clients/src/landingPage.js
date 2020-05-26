@@ -4,13 +4,11 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { CircularProgress } from "@material-ui/core";
-import { Slide, Fade } from "@material-ui/core";
+import { Slide } from "@material-ui/core";
 
 function LandingPage(props) {
   const { register, handleSubmit, errors } = useForm();
   const [firstPostRender, setfirstPostRender] = useState(false);
-  const [message, setMessage] = useState(false);
-  const [error, setError] = useState(false);
   const [userLoading, setUserLoading] = useState(false);
   const [creditLoading, setCreditLoading] = useState(false);
   const [debitLoading, setDebitLoading] = useState(false);
