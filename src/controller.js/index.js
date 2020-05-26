@@ -45,7 +45,7 @@ export const filter = (req, res) => {
     });
   } else if (name && balance) {
     pool.query(
-      `SELECT * FROM users WHERE name=$1 AND walletbalance <= $2 ORDER BY name ASC`,
+      `SELECT * FROM users WHERE name=$1 AND walletbalance <= $2 ORDER BY name DESC`,
       [name, balance],
       (error, results) => {
         if (error) {
@@ -62,7 +62,7 @@ export const filter = (req, res) => {
     );
   } else if (name && !balance) {
     pool.query(
-      `SELECT * FROM users WHERE name=$1 ORDER BY name ASC`,
+      `SELECT * FROM users WHERE name=$1 ORDER BY name DESC`,
       [name],
       (error, results) => {
         if (error) {
@@ -79,7 +79,7 @@ export const filter = (req, res) => {
     );
   } else if (!name && balance) {
     pool.query(
-      `SELECT * FROM users WHERE walletbalance <= $1 ORDER BY walletbalance ASC`,
+      `SELECT * FROM users WHERE walletbalance <= $1 ORDER BY walletbalance DESC`,
       [balance],
       (error, results) => {
         if (error) {
