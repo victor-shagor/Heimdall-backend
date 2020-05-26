@@ -14,17 +14,17 @@
 
 - `api/v1/user`
   This endpoint adds a user.
-  Requirement: username or email to be supplied
+  `Requirement`: username or email to be supplied
 - `api/v1/credit`
   This endpoint credits all user with random amounts.
 - `api/v1/debit`
   This endpoint debits all user with random amounts.
 - `api/v1/filter`
   This endpoint filters users by name and or balance.
-  Requirement: name or balance to be supplied
+  `Requirement`: name or balance to be supplied
 - `api/v1/withdraw/:id`
   This endpoint debit user.
-  Requirement: amount is to be supplied
+  `Requirement`: amount is to be supplied
 
 ### Installing/Run locally
 
